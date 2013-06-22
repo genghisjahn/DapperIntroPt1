@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormDapperHowTo", "WinFormDapperHowTo\WinFormDapperHowTo.csproj", "{2C264532-84B3-41EE-AEF7-6A1FBACB6E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperHowToData", "DapperHowToData\DapperHowToData.csproj", "{46F176E9-1AB9-4746-A9C6-3AF6247F59A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperHowToTests", "DapperHowToTests\DapperHowToTests.csproj", "{E9F4F59B-19A2-415F-B1AA-CCD05BF2A1D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C264532-84B3-41EE-AEF7-6A1FBACB6E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C264532-84B3-41EE-AEF7-6A1FBACB6E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C264532-84B3-41EE-AEF7-6A1FBACB6E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C264532-84B3-41EE-AEF7-6A1FBACB6E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F176E9-1AB9-4746-A9C6-3AF6247F59A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F176E9-1AB9-4746-A9C6-3AF6247F59A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F176E9-1AB9-4746-A9C6-3AF6247F59A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F176E9-1AB9-4746-A9C6-3AF6247F59A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F4F59B-19A2-415F-B1AA-CCD05BF2A1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F4F59B-19A2-415F-B1AA-CCD05BF2A1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F4F59B-19A2-415F-B1AA-CCD05BF2A1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F4F59B-19A2-415F-B1AA-CCD05BF2A1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
