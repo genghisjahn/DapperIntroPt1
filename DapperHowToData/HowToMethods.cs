@@ -22,17 +22,25 @@ namespace DapperHowToData
             }
             return result;
         }
+        public static IEnumerable<Team> GetIEnumerableTeamByID(int teamID)
+        {
+            SqlCeConnection cn = new SqlCeConnection(Properties.Settings.Default.DapperDataConnectionString);
+            cn.Open();
+            string query = "select * from team where teamID=@teamID";
+            IEnumerable<Team> deferredtest = cn.Query<Team>(query, new { teamID = teamID, city = "Dallas" });
+            if (cn.State != System.Data.ConnectionState.Closed)
+            {
+                cn.Close();
+            }
+            return deferredtest;
+        }
         public static Team GetTeamByID(int teamID)
         {
             Team result = new Team();
             SqlCeConnection cn = new SqlCeConnection(Properties.Settings.Default.DapperDataConnectionString);
             cn.Open();
-            
             string query = "select * from team where teamID=@teamID";
             result = cn.Query<Team>(query, new { teamID = teamID,city="Dallas" }).FirstOrDefault();
-
-            var deferredtest = cn.Query<Team>(query, new { teamID = teamID, city = "Dallas" });
-
             if (cn.State != System.Data.ConnectionState.Closed)
             {
                 cn.Close();

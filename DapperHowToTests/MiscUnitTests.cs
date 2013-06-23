@@ -2,6 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DapperHowToData;
 using DapperHowToData.POCOs;
+/*
+using System.Collections.Generic;
+using System.Linq;
+ * */
 namespace DapperHowToTests
 {
     [TestClass]
@@ -19,14 +23,6 @@ namespace DapperHowToTests
             Team team = HowToMethods.GetTeamByID(2);
             Assert.IsTrue(team.TeamID == 2);
         }
-
-        [TestMethod]
-        public void SelectByTeamInvalidIDParamter()
-        {
-            Team team = HowToMethods.GetTeamByID(100);
-            Assert.IsNull(team);
-        }
-
         [TestMethod]
         public void SelectByTeamIDParamterWithExraFieldName()
         {
@@ -39,5 +35,22 @@ namespace DapperHowToTests
             Team team = HowToMethods.GetTeamByID(1);
             Assert.IsTrue(team.TeamID == 1);
         }
+
+        /* New for Pt2 */
+        /*
+        [TestMethod]
+        public void SelectIEnumerableTeamByID()
+        {
+            IEnumerable<Team> teams = HowToMethods.GetIEnumerableTeamByID(1);
+            Assert.IsTrue(teams.First().TeamID == 1);
+        }
+
+        [TestMethod]
+        public void SelectByTeamInvalidIDParamter()
+        {
+            Team team = HowToMethods.GetTeamByID(100);
+            Assert.IsNull(team);
+        }
+         * */
     }
 }
