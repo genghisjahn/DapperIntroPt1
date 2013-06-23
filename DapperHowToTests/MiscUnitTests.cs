@@ -24,7 +24,7 @@ namespace DapperHowToTests
         public void SelectByTeamInvalidIDParamter()
         {
             Team team = HowToMethods.GetTeamByID(100);
-            Assert.IsNotNull(team);
+            Assert.IsNull(team);
         }
 
         [TestMethod]
