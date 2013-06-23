@@ -19,6 +19,14 @@ namespace DapperHowToTests
             Team team = HowToMethods.GetTeamByID(2);
             Assert.IsTrue(team.TeamID == 2);
         }
+
+        [TestMethod]
+        public void SelectByTeamInvalidIDParamter()
+        {
+            Team team = HowToMethods.GetTeamByID(100);
+            Assert.IsNotNull(team);
+        }
+
         [TestMethod]
         public void SelectByTeamIDParamterWithExraFieldName()
         {

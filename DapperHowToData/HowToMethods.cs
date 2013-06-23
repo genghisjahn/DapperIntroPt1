@@ -30,6 +30,9 @@ namespace DapperHowToData
             
             string query = "select * from team where teamID=@teamID";
             result = cn.Query<Team>(query, new { teamID = teamID,city="Dallas" }).FirstOrDefault();
+
+            var deferredtest = cn.Query<Team>(query, new { teamID = teamID, city = "Dallas" });
+
             if (cn.State != System.Data.ConnectionState.Closed)
             {
                 cn.Close();
