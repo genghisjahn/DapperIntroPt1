@@ -60,7 +60,9 @@
   <ItemGroup>
     <Compile Include="DapperMethods.cs" />
     <Compile Include="DBCleanUpHack.cs" />
+    <Compile Include="ExamplesForIEnumerable.cs" />
     <Compile Include="HowToMethods.cs" />
+    <Compile Include="HowVarWorks.cs" />
     <Compile Include="POCOs\Player.cs" />
     <Compile Include="POCOs\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

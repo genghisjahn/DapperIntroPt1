@@ -11,6 +11,7 @@ namespace DapperHowToTests
     [TestClass]
     public class MiscTests
     {
+        
         [TestMethod]
         public void SelectTeamWithID1()
         {
@@ -36,21 +37,6 @@ namespace DapperHowToTests
             Assert.IsTrue(team.TeamID == 1);
         }
 
-        /* New for Pt2 */
-        /*
-        [TestMethod]
-        public void SelectIEnumerableTeamByID()
-        {
-            IEnumerable<Team> teams = HowToMethods.GetIEnumerableTeamByID(1);
-            Assert.IsTrue(teams.First().TeamID == 1);
-        }
-
-        [TestMethod]
-        public void SelectByTeamInvalidIDParamter()
-        {
-            Team team = HowToMethods.GetTeamByID(100);
-            Assert.IsNull(team);
-        }
-         * */
+        
     }
 }
