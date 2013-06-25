@@ -48,7 +48,6 @@ namespace DapperHowToData
             playerdoesnotexist.TeamID = -1;
             
             Player firstplayernalt = cn.Query<Player>(queryplayerNameNull).DefaultIfEmpty(playerdoesnotexist).FirstOrDefault();
-            
             string firstplayername = cn.Query<string>(queryplayerNameNull).FirstOrDefault();
             try
             {
@@ -71,6 +70,10 @@ namespace DapperHowToData
             //int? is very helpful when dealing with database tables because
             //often times a column type in the record set will be an int that allows nulls.
             //Always allowing the default value to go through could be misleading.
+
+            //string? test; 
+            //Does not work because string is already a reference type and can be null.
+
 
             int nofirstplayerIDAlter = cn.Query<int>(queryplayerIDDoesNotExist).DefaultIfEmpty(-1).FirstOrDefault();
 
