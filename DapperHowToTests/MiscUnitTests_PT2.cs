@@ -9,6 +9,12 @@ namespace DapperHowToTests
     [TestClass]
     public class MiscUnitTests_PT2
     {
+        [TestMethod]
+        public void RunTest()
+        {
+             DapperHowToData.ExamplesForIEnumerable.ExampleMethod();
+        }
+
         /* New for Pt2 */
         /*
         [TestMethod]
