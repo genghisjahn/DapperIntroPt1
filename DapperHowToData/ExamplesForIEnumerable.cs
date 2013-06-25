@@ -56,7 +56,7 @@ namespace DapperHowToData
                 string firstplayernamepropr = cn.Query<Player>(queryplayerNameNull).FirstOrDefault().PlayerName;
                 //Because we are first returning the default, which is null, which has no values for property names
                 //even though the default value of the PlayerName property is null, it can't get that far because
-                //the object that it is attached to is null.  There's no there there.;
+                //the object that it is attached to is null.  There's no THERE there.;
             }
             catch (NullReferenceException exnull)
             {
