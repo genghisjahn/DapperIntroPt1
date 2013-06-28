@@ -22,7 +22,8 @@ namespace DapperHowToData
             IEnumerable<Player> enumerableexample = cn.Query<Player>(queryteamID2);
             List<Player> listexample = cn.Query<Player>(queryteamID2).ToList();
             Player[] arrayexample = cn.Query<Player>(queryteamID2).ToArray();
-            Dictionary<int, Player> dictionaryexample = cn.Query<Player>(queryteamID2).ToDictionary(p => p.PlayerID, p => p);
+            Dictionary<int, Player> dictionaryexample = cn.Query<Player>(queryteamID2)
+                                                        .ToDictionary(p => p.PlayerID, p => p);
 
 
 
@@ -120,7 +121,7 @@ namespace DapperHowToData
 
             /******************************************/
 
-            //value types - by definiation, they have a value.  They are never null.
+            //value types - by definition, they have a value.  They are never null.
             
             int firstplayerID = cn.Query<int>("select playerID from player where teamID= 8").FirstOrDefault();
 
@@ -142,6 +143,7 @@ namespace DapperHowToData
 
             //If we uncomment this...
             //Player? nullablePlayer;
+            //string? nullableString;
             //Does not work because Player is already a reference type and can be null.
 
 
