@@ -76,7 +76,9 @@ namespace DapperHowToData
             try
             {
                 //Why doesn't this work?
-                string firstplayernamepropr = cn.Query<Player>(queryplayerNameNull).FirstOrDefault().PlayerName;
+                string firstplayernamepropr = cn.Query<Player>(queryplayerNameNull)
+                                                .FirstOrDefault()
+                                                .PlayerName;
                 /*
                  * Three things are happening:
                  * 1. cn.Query() returns IEnumerable of Player
@@ -97,7 +99,10 @@ namespace DapperHowToData
             //But this will work.
             try
             {
-                string firstplayernamepropr = cn.Query<Player>(queryplayerNameNull).DefaultIfEmpty(playerdoesnotexist).FirstOrDefault().PlayerName;
+                string firstplayernamepropr = cn.Query<Player>(queryplayerNameNull)
+                                                .DefaultIfEmpty(playerdoesnotexist)
+                                                .FirstOrDefault()
+                                                .PlayerName;
                 /*
                  * Four things are happening here.
                  * 1. cn.Query() is return IEnumerable of Player
