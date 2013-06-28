@@ -53,10 +53,10 @@ namespace DapperHowToData
              * If we reference it code, we get a compile time error.
              * */
             
+            //If we uncomment the .WriteLine...compile-time error.
             Player tempPlayer;
             //Console.WriteLine("Player name is {0}.", tempPlayer);
 
-                        
             Player nofirstplayerdefault = cn.Query<Player>(queryplayerIDNull).FirstOrDefault();
 
             Player playerdoesnotexist = new Player();
@@ -135,8 +135,9 @@ namespace DapperHowToData
                 Console.WriteLine("Int value {0}.", regularint.ToString());
             }
 
-            //string? test; 
-            //Does not work because string is already a reference type and can be null.
+            //If we uncomment this...
+            //Player? nullablePlayer;
+            //Does not work because Player is already a reference type and can be null.
 
 
             int nofirstplayerIDAlter = cn.Query<int>(queryplayerIDDoesNotExist).DefaultIfEmpty(-1).FirstOrDefault();
