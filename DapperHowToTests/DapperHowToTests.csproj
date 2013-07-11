@@ -53,6 +53,7 @@
     <Compile Include="MiscUnitTests_PT1.cs" />
     <Compile Include="MiscUnitTests_PT2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MiscUnitTest_P3.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DapperHowToData\DapperHowToData.csproj">
