@@ -11,17 +11,17 @@ namespace DapperHowToData.POCOs
         public int TeamID { get; set; }
         public string TeamName { get; set; }
         public int numplayers { get; set; }
-        public DateTime RetrievedOn { get; set; }
+        public DateTime RetrievedOn { get; private set; }
         public override string ToString()
         {
             return this.TeamName ?? "";
         }
 
-        public Team(int TeamID, string TeamName, DateTime RetrievedOn)
+        public Team(int TeamID, string TeamName, DateTime retrievedon)
         {
             this.TeamID = TeamID;
             this.TeamName = TeamName;
-            this.RetrievedOn = RetrievedOn;
+            this.RetrievedOn = retrievedon;
         }
        
         

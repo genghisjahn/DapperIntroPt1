@@ -57,7 +57,11 @@ namespace DapperHowToData
             Team result;// = new Team();
             SqlCeConnection cn = new SqlCeConnection(Properties.Settings.Default.DapperDataConnectionString);
             cn.Open();
-            result = cn.Query<Team>("select * from team where teamID=@teamID", new { teamID = 1}).FirstOrDefault();
+            result = cn.Query("select * from team where teamID=@teamID", new { teamID = 1 })
+                    .Select(tm => new Team((int)tm.teamID, (string)tm.teamname, DateTime.UtcNow) 
+                    { numplayers = 5 }
+                    )
+                    .FirstOrDefault();
             if (cn.State != System.Data.ConnectionState.Closed)
             {
                 cn.Close();
@@ -70,9 +74,7 @@ namespace DapperHowToData
             Team result;// = new Team();
             SqlCeConnection cn = new SqlCeConnection(Properties.Settings.Default.DapperDataConnectionString);
             cn.Open();
-            result = cn.Query("select * from team where teamID=@teamID", new { teamID = 1 })
-                .Select(tm=>new Team((int)tm.teamID,(string)tm.teamname,DateTime.UtcNow))
-                .FirstOrDefault();
+            result = cn.Query<Team>("select * from team where teamID=@teamID", new { teamID = 1 }).FirstOrDefault();
             if (cn.State != System.Data.ConnectionState.Closed)
             {
                 cn.Close();
