@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -54,6 +55,7 @@
     <Compile Include="MiscUnitTests_PT2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MiscUnitTest_P3.cs" />
+    <Compile Include="CaseTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DapperHowToData\DapperHowToData.csproj">

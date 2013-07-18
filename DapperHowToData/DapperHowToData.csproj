@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DapperCaseExamples.cs" />
     <Compile Include="DapperMethods.cs" />
     <Compile Include="DBCleanUpHack.cs" />
     <Compile Include="ExamplesForIEnumerable.cs" />
